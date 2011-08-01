@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This is an auto generated file and is not intended for modification. -->
+
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+					   xmlns:s="library://ns.adobe.com/flex/spark"
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   xmlns:flexui="flexunit.flexui.*"
+					   creationComplete="onCreationComplete()">
+	<fx:Script>
+		<![CDATA[
+			import com.wabysabi.wordconnect.graph.WordGraphTest;
+			import com.wabysabi.wordconnect.model.GameTest;
+			import org.flexunit.runner.Request;
+			import com.wabysabi.wordconnect.parser.WordGraphCSVParserTest;
+			import com.wabysabi.wordconnect.WordGameEngineTest;
+			
+			public function currentRunTestSuite():Array
+			{
+				var testsToRun:Array = new Array();
+				
+				testsToRun.push(Request.methods(com.wabysabi.wordconnect.WordGameEngineTest,["canKeepGameScore",
+					"hasWordGraph",
+					"canCreateAddAddNewRounds",
+					"canCreateWordGame"]));
+				
+				testsToRun.push(Request.methods(com.wabysabi.wordconnect.parser.WordGraphCSVParserTest,["canParseCorrectCSV"]));
+				
+				testsToRun.push(Request.methods(com.wabysabi.wordconnect.model.GameTest,["canKeepRounds",
+					"canKeepGameScore"]));
+				
+				testsToRun.push(Request.methods(com.wabysabi.wordconnect.graph.WordGraphTest,["canAddAssociation",
+					"canGetAllWords"]));
+				return testsToRun;
+			}
+			
+			
+			private function onCreationComplete():void
+			{
+				testRunner.runWithFlexUnit4Runner(currentRunTestSuite(), "wc-core");
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<flexui:FlexUnitTestRunnerUI id="testRunner">
+	</flexui:FlexUnitTestRunnerUI>
+</s:WindowedApplication>

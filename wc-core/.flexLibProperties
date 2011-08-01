@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.wabysabi.wordconnect.model.Game"/>
+    <classEntry path="com.wabysabi.wordconnect.model.GameTest"/>
+    <classEntry path="com.wabysabi.wordconnect.model.Round"/>
+    <classEntry path="com.wabysabi.wordconnect.model.Difficulty"/>
+    <classEntry path="com.wabysabi.wordconnect.model.WordSlot"/>
+    <classEntry path="com.wabysabi.wordconnect.WordGameEngine"/>
+    <classEntry path="com.wabysabi.wordconnect.graph.WordGraph"/>
+    <classEntry path="com.wabysabi.wordconnect.graph.WordGraphTest"/>
+    <classEntry path="com.wabysabi.wordconnect.graph.WordNode"/>
+    <classEntry path="com.wabysabi.wordconnect.parser.WordGraphCSVParser"/>
+    <classEntry path="com.wabysabi.wordconnect.parser.WordGraphCSVParserTest"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
